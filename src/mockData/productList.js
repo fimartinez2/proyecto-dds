@@ -1,0 +1,51 @@
+export const productList = [
+  {
+    nombre: "Bebida 2lt",
+    marca: "Coca Cola",
+    img: "https://picsum.photos/200?random=1",
+    precio: "$1.990",
+    categoria: "Bebidas",
+  },
+  {
+    nombre: "Bebida 2lt",
+    marca: "Sprite",
+    img: "https://picsum.photos/200?random=2",
+    precio: "$1.790",
+    categoria: "Bebidas",
+  },
+  {
+    nombre: "Bebida 1lt",
+    marca: "Coca Cola",
+    img: "https://picsum.photos/200?random=3",
+    precio: "$1.290",
+    categoria: "Bebidas",
+  },
+  {
+    nombre: "Six Pack 500cc",
+    marca: "Escudo",
+    img: "https://picsum.photos/200?random=4",
+    precio: "$2.990",
+    categoria: "Cervezas",
+  },
+  {
+    nombre: "Six Pack 500cc",
+    marca: "Andes",
+    img: "https://picsum.photos/200?random=5",
+    precio: "$2.890",
+    categoria: "Cervezas",
+  },
+  {
+    nombre: "Pisco 1lt",
+    marca: "Alto del Carmen",
+    img: "https://picsum.photos/200?random=6",
+    precio: "5.290",
+    categoria: "Destilados",
+  },
+  {
+    nombre: "Pisco 750cc",
+    marca: "Alto del Carmen",
+    img: "https://picsum.photos/200?random=7",
+    precio: "3.790",
+    categoria: "Destilados",
+  },
+];

@@ -1,6 +1,8 @@
 import React from "react";
+import { useState } from "react";
 
 const TarjetaProducto = (props) => {
+  const [dataProducto, setDataProducto] = useState({});
   return (
     <div className="card">
       <div className="card__body">
@@ -12,7 +14,9 @@ const TarjetaProducto = (props) => {
           <div className="card__categoria">{props.categoria}</div>
         </div>
 
-        <div className="card__btn">Agregar al carro</div>
+        <div className="card__btn" onClick={props.handleClick}>
+          {props.textoBoton}
+        </div>
       </div>
     </div>
   );

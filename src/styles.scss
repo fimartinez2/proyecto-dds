@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+$azul-primario: #58b3e7;
+$azul-claro: #bde5fb;
+$negro: #031926;
+$amarillo: #ffc856;
+$amarillo-oscuro: #ce8800;
+
+$radius: 1rem;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 2rem;
+  background-color: $azul-claro;
+}
+
+.contenedor-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.card {
+  @include flexCenter();
+
+  background-color: white;
+  color: $negro;
+  align-items: center;
+  width: 250px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: $radius;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  &__pie {
+    display: inline;
+  }
+  &__nombre {
+    font-size: 1.6rem;
+  }
+  &__marca {
+    font-size: 1.3rem;
+  }
+  &__precio {
+    font-size: 1.5rem;
+  }
+
+  &__btn {
+    color: $amarillo-oscuro;
+    cursor: pointer;
+    margin-top: 15px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

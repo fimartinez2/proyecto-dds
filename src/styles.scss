@@ -5,7 +5,7 @@ $azul-oscuro: #216c97;
 $azul-claro: #bde5fb;
 $negro: #031926;
 $amarillo: #f8c600;
-$amarillo-oscuro: #ce8800;
+$amarillo-oscuro: #d5b904;
 
 $radius: 1rem;
 $sombra-sutil: 4px 7px 22px -12px rgba(0, 0, 0, 0.5);
@@ -174,5 +174,19 @@ body {
       background-color: $azul-primario;
       color: white;
     }
+  }
+}
+
+.home-div {
+  cursor: pointer;
+  h3:hover {
+    transform: scale(1.5);
+    transform-origin: left;
+    color: $amarillo-oscuro;
+  }
+  h3:active {
+    transform: scale(1.2);
+    transform-origin: left;
+    color: red;
   }
 }

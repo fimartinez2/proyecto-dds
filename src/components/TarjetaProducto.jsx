@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 
 const TarjetaProducto = (props) => {
-  const [dataProducto, setDataProducto] = useState({});
   return (
     <div className="card">
       <div className="card__body">
@@ -10,7 +9,7 @@ const TarjetaProducto = (props) => {
         <div className="card__marca">{props.marca}</div>
         <img src={props.img} alt="" />
         <div className="card__pie">
-          <div className="card__precio">{props.precio}</div>
+          <div className="card__precio">${props.precio}</div>
           <div className="card__categoria">{props.categoria}</div>
         </div>
 

@@ -107,8 +107,9 @@ body {
     font-size: large;
 
     input {
-      margin-right: 2rem;
+      margin-right: 1rem;
       border-radius: 1rem;
+      text-indent: 1rem;
     }
   }
 }
@@ -146,6 +147,32 @@ body {
     }
     & span:hover {
       transform: scale(1.2, 1.2);
+    }
+  }
+}
+
+.categorias {
+  @include flexCenter();
+  ul {
+    font-size: 2rem;
+    justify-content: left;
+
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tag {
+    background-color: white;
+    border-radius: 5px;
+    border: $borde-azul-oscuro;
+    padding: 1rem;
+    padding-right: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $azul-primario;
+      color: white;
     }
   }
 }

@@ -31,7 +31,7 @@ export const productList = [
     nombre: "Six Pack 500cc",
     marca: "Andes",
     img: "https://picsum.photos/200?random=5",
-    precio: "$2.890",
+    precio: "2.890",
     categoria: "Cervezas",
   },
   {
@@ -108,7 +108,7 @@ export const productList = [
     nombre: "Six Pack 500cc",
     marca: "Andes",
     img: "https://picsum.photos/200?random=52",
-    precio: "$2.890",
+    precio: "2.890",
     categoria: "Cervezas",
   },
   {
@@ -185,7 +185,7 @@ export const productList = [
     nombre: "Six Pack 500cc",
     marca: "Andes",
     img: "https://picsum.photos/200?random=53",
-    precio: "$2.890",
+    precio: "2.890",
     categoria: "Cervezas",
   },
   {
@@ -262,7 +262,7 @@ export const productList = [
     nombre: "Six Pack 500cc",
     marca: "Andes",
     img: "https://picsum.photos/200?random=55",
-    precio: "$2.890",
+    precio: "2.890",
     categoria: "Cervezas",
   },
   {
@@ -339,7 +339,7 @@ export const productList = [
     nombre: "Six Pack 500cc",
     marca: "Andes",
     img: "https://picsum.photos/200?random=56",
-    precio: "$2.890",
+    precio: "2.890",
     categoria: "Cervezas",
   },
   {

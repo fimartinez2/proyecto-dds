@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 $azul-primario: #58b3e7;
+$azul-oscuro: #216c97;
 $azul-claro: #bde5fb;
 $negro: #031926;
-$amarillo: #ffc856;
-$amarillo-oscuro: #ce8800;
+$amarillo: #f8c600;
+$amarillo-oscuro: #d5b904;
 
 $radius: 1rem;
+$sombra-sutil: 4px 7px 22px -12px rgba(0, 0, 0, 0.5);
+$sombra-selected: 4px 7px 22px -5px rgba(0, 0, 0, 0.5);
+$borde-azul-oscuro: 2px solid $azul-oscuro;
 
 @mixin flexCenter {
   display: flex;
@@ -20,10 +24,25 @@ body {
   background-color: $azul-claro;
 }
 
-.contenedor-productos {
+.productos {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
+  flex-direction: column;
+  align-items: center;
+
+  .buscar {
+    margin: 1rem;
+    width: 30vw;
+    height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    text-indent: 1.5rem;
+    box-shadow: inset $sombra-sutil;
+  }
+  .__contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
 }
 
 .card {
@@ -38,6 +57,9 @@ body {
   border-radius: $radius;
   margin-left: 1rem;
   margin-bottom: 1rem;
+  box-shadow: $sombra-sutil;
+  border: 2px solid $azul-oscuro;
+
   &__pie {
     display: inline;
   }
@@ -58,5 +80,113 @@ body {
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+.btn {
+  background-color: $amarillo;
+  height: 2rem;
+  width: 6rem;
+  text-align: center;
+  line-height: 2rem;
+  color: $azul-oscuro;
+  border-radius: 3px;
+  border: $borde-azul-oscuro;
+  cursor: pointer;
+
+  &:active {
+    color: white;
+    border: 2px solid white;
+  }
+}
+
+.addTag {
+  @include flexCenter();
+  &__elements {
+    display: flex;
+    font-size: large;
+
+    input {
+      margin-right: 1rem;
+      border-radius: 1rem;
+      text-indent: 1rem;
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+
+  &__box {
+    position: relative;
+    width: 50%;
+    min-height: 500px;
+    background-color: white;
+    border-radius: 1rem;
+    border: $borde-azul-oscuro;
+    margin: 20px auto;
+    padding: 20px;
+    padding-top: 10px;
+  }
+
+  &__close {
+    cursor: pointer;
+    text-align: end;
+    font-size: 2em;
+    transform: rotate(45deg);
+    transform-origin: right;
+    color: $azul-oscuro;
+
+    & span:active {
+      color: $amarillo-oscuro;
+    }
+    & span:hover {
+      transform: scale(1.2, 1.2);
+    }
+  }
+}
+
+.categorias {
+  @include flexCenter();
+  ul {
+    font-size: 2rem;
+    justify-content: left;
+
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tag {
+    background-color: white;
+    border-radius: 5px;
+    border: $borde-azul-oscuro;
+    padding: 1rem;
+    padding-right: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $azul-primario;
+      color: white;
+    }
+  }
+}
+
+.home-div {
+  cursor: pointer;
+  h3:hover {
+    transform: scale(1.5);
+    transform-origin: left;
+    color: $amarillo-oscuro;
+  }
+  h3:active {
+    transform: scale(1.2);
+    transform-origin: left;
+    color: red;
   }
 }

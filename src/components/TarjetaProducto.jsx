@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 const TarjetaProducto = (props) => {
   return (
@@ -8,11 +9,13 @@ const TarjetaProducto = (props) => {
         <div className="card__marca">{props.marca}</div>
         <img src={props.img} alt="" />
         <div className="card__pie">
-          <div className="card__precio">{props.precio}</div>
+          <div className="card__precio">${props.precio}</div>
           <div className="card__categoria">{props.categoria}</div>
         </div>
 
-        <div className="card__btn">Agregar al carro</div>
+        <div className="card__btn" onClick={props.handleClick}>
+          {props.textoBoton}
+        </div>
       </div>
     </div>
   );
